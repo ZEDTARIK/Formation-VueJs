@@ -1,8 +1,13 @@
 const app = Vue.createApp({
     data() {
         return {
-            title: 'Formation VueJs 3',
+            title: 'Formation VueJs '+ new Date().toLocaleString(),
             author :  'Zouhair ET-TARAK'
+        }
+    },
+    methods: {
+        hello() {
+            return `Hello Mr. ${this.author}`;
         }
     }
 });
