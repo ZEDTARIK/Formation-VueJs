@@ -23,6 +23,8 @@
         <h3>Event</h3>
         <label for="">Count : </label>{{ count }}
         <button @click="increment(1)" >incriment ++ </button>
+        <button @click.once="increment(1)" >incriment Once Step </button>
+
         <button v-on:click="decrement(1)">decrement --</button>
         <hr>
         count double click : {{ count }}
