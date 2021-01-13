@@ -1,11 +1,4 @@
-new Vue({
-    el: '#app',
-    data: {
-        Title: 'Formation VueJS version 2'
-    },
-    methods:{
-        hello : function () {
-            return `Hello ${this.Title}`;
-        }
-    }
-})
+const app = Vue.createApp({
+    template: `<h3>Template vue js </h3>`
+});
+app.mount('#app');
