@@ -37,6 +37,13 @@
         <label for=""> DataBiding v-model</label>     
         <input type="text" name="fullName" v-model="fullName">  {{ fullName }}
 
+        <hr>
+        <h3>Computed</h3>
+        <input type="text" v-model="initValue">
+        <hr>
+         result : {{ initValue}} * {{ count}}  = {{ calcul }}
+         <hr>
+        result final {{ calcul }}    
     </div>
 
     <script src="script.js"></script>

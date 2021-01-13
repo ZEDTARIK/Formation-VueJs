@@ -5,7 +5,8 @@ const app = Vue.createApp({
             author :  'Zouhair ET-TARAK',
             version : 'vue 3',
             count : 0,
-            fullName : ''
+            fullName : '',
+            initValue : 0 
         }
     },
     methods: {
@@ -18,6 +19,11 @@ const app = Vue.createApp({
         decrement(step) {
             this.count -=step;
         }
+    },
+    computed : {
+            calcul : function() {
+                return this.initValue * this.count;
+            }
     }
 });
 app.mount('#app');
