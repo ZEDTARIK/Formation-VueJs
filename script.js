@@ -4,7 +4,8 @@ const app = Vue.createApp({
             title: 'Formation VueJs '+ new Date().toLocaleString(),
             author :  'Zouhair ET-TARAK',
             version : 'vue 3',
-            count : 0
+            count : 0,
+            fullName : ''
         }
     },
     methods: {
