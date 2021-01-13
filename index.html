@@ -5,50 +5,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VueJs-Formation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <script src="VueJs.js"></script>
 </head>
 
 <body>
-    <div id="app">
-        <h2>Data : {{title}} - By : {{author}}</h2>
-        <h2>Methods :{{ hello() }}</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+
+                <div id="app">
+
+                    <h2>Data : {{title}} - By : {{author}}</h2>
+                    <h2>Methods :{{ hello() }}</h2>
 
 
-        <span>
-            <h2>Data Biding : </h2> <input type="text" :value="version">
-        </span>
+                    <span>
+                        <h2>Data Biding : </h2> <input class="form-control" type="text" :value="version">
+                    </span>
 
-        <hr>
+                    <hr>
 
-        <h3>Event</h3>
-        <label for="">Count : </label>{{ count }}
-        <button @click="increment(1)" >incriment ++ </button>
-        <button @click.once="increment(1)" >incriment Once Step </button>
+                    <h3>Event</h3>
+                    <label for="">Count : </label>{{ count }}
+                    <div class="btn-toolbar">
+                        <button class="btn btn-primary" @click="increment(1)">incriment ++ </button>
 
-        <button v-on:click="decrement(1)">decrement --</button>
-        <hr>
-        count double click : {{ count }}
-        <button v-on:dblclick="increment(5)" >incriment ++ </button>
-        <button v-on:dblclick="decrement(5)">decrement --</button>
+                        <button class="btn btn-primary" @click.once="increment(1)">incriment Once Step </button>
+
+                        <button class="btn btn-primary" v-on:click="decrement(1)">decrement --</button>
+                    </div>
+                    <hr>
+                    count double click : {{ count }}
+                    <button class="btn btn-success" v-on:dblclick="increment(5)">incriment ++ </button>
+                    <button class="btn btn-success" v-on:dblclick="decrement(5)">decrement --</button>
 
 
 
-        <hr>
-        <label for=""> DataBiding v-model</label>     
-        <input type="text" name="fullName" v-model="fullName">  {{ fullName }}
+                    <hr>
+                    <label for=""> DataBiding v-model</label>
+                    <input type="text" name="fullName" v-model="fullName"> {{ fullName }}
 
-        <hr>
-        <h3>Computed</h3>
-        <input type="text" v-model="initValue">
-        <hr>
-         result : {{ initValue}} * {{ count}}  = {{ calcul }}
-         <hr>
-        result final {{ calcul }}    
+                    <hr>
+                    <h3>Computed</h3>
+                    <input type="text" v-model="initValue">
+                    <hr>
+                    result : {{ initValue}} * {{ count}} = {{ calcul }}
+                    <hr>
+                    result final {{ calcul }}
+                    <hr>
+                    Watching :
+                    <span class="badge bg-danger">{{ message }}</span>
 
-        <hr>
-         Watching : {{ message }}
 
-         
+
+
+
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="script.js"></script>
