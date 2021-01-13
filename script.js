@@ -1,4 +1,9 @@
 const app = Vue.createApp({
-    template: `<h3>Template vue js </h3>`
+    data() {
+        return {
+            title: 'Formation VueJs 3',
+            author :  'Zouhair ET-TARAK'
+        }
+    }
 });
 app.mount('#app');
