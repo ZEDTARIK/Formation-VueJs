@@ -7,7 +7,8 @@ const app = Vue.createApp({
             count: 1,
             fullName: '',
             initValue: 0,
-            message: ''
+            message: '',
+            result : false
         }
     },
     methods: {
@@ -24,14 +25,21 @@ const app = Vue.createApp({
     computed: {
         calcul: function () {
             return this.initValue * this.count;
+        },
+        calssObj : function() {
+            return {'bg-success': this.result, 'bg-danger' : !this.result}
         }
     },
     watch: {
         calcul: function (value) {
-            if (value >= 10)
+            if (value >= 10){
+                this.result = true;
                 this.message = 'WINNER';
-            else
+            }
+            else{
+                this.result = false;
                 this.message = 'LOSER';
+            }
         }
     }
 });
